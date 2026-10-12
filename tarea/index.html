@@ -14,6 +14,16 @@
         section {
             border: 1px solid #ccc;
             padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        input, button {
+            padding: 6px;
+            margin: 4px;
+        }
+
+        .error {
+            color: red;
         }
 
         .estudiante {
@@ -24,11 +34,28 @@
 
 <body>
 
-    <h1 id="titulo">Registro de notas de estudiantes</h1>
+    <h1 id="titulo">Registro de notas</h1>
+
+    <section>
+        <h2>Registrar estudiante</h2>
+
+        <form id="formEstudiante">
+            <input id="nombre" type="text" placeholder="Nombre del estudiante">
+            <input id="nota" type="number" placeholder="Nota de 0 a 20">
+            <button type="submit">Agregar</button>
+        </form>
+
+        <p id="mensaje"></p>
+    </section>
+
+    <section>
+        <h2>Buscar estudiante</h2>
+        <input id="buscar" type="text" placeholder="Escribe un nombre">
+        <p id="textoBusqueda">Buscando: ...</p>
+    </section>
 
     <section>
         <h2>Estudiantes registrados</h2>
-
         <ul id="listaEstudiantes"></ul>
     </section>
 
